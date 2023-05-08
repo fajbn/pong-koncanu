@@ -1,0 +1,227 @@
+CE IMS CEJT DEJ SE IMPLEMENTJRT D SE ZOGA ODBIJE OD LEVE IN DESNE STRANI LOPARJA IN CORNERJU
+        // if(tocke==rekord)
+        // {
+        //     tr.setVisible(true);
+        // }
+
+        // if(xz+10==xi && yz>yi+h/40) //zoga se odbije od levega roba loparja
+        // {
+        //    smerx=false; 
+        // }
+
+        // if(xz+7==xi && yz+7==yi) //zoga se odbije od levega cornerja loparja
+        // {
+        //     smery=false;
+        //     tocke++;
+        //     t.setText(tocke+"");
+        // }
+        
+        // if(xz+10==xi && yz-10==xi) //zoga se odbije od leve strani loparja
+        // {
+        //     smerx=false;
+        //     tocke++;
+        //     t.setText(tocke+"");
+        // }
+
+        // if(xz-10==xi+100) //zoga se odbije od desne strani loparja
+        // {
+        //     smerx=true;
+        //     tocke++;
+        //     t.setText(tocke+"");
+        // }
+
+
+
+
+// gumbIgra.setOnMouseClicked(new EventHandler<MouseEvent>() { 
+ 
+        //     @Override 
+        //     public void handle(MouseEvent t) 
+        //     {
+        //         spremeniOkna(Igra);
+        //         Igra.setCursor(Cursor.NONE);
+        //     } 
+        // });
+
+        // gumbIzhod.setOnKeyPressed(e -> {
+        //     if (e.getCode().equals(KeyCode.ENTER)) 
+        //     {
+        //         gumbIzhod.fire();
+        //     }
+        // });
+
+        // gumbIzhod.setOnAction(e ->
+        // {
+        //     Platform.exit();
+        // });
+        
+        // Meni.setOnKeyPressed(b -> {
+        //     if (b.getCode().equals(KeyCode.ENTER)) 
+        //     {
+        //         spremeniOkna(Igra);
+        //     }
+        // });
+
+
+        // gumbMeni.setOnAction(e -> spremeniOkna(Meni));
+        // gumbMeni.setOnMouseClicked(new EventHandler<MouseEvent>() { 
+ 
+        //     @Override 
+        //     public void handle(MouseEvent b) 
+        //     {
+        //         spremeniOkna(Meni);
+        //         Igra.setCursor(Cursor.DEFAULT);
+        //     } 
+        // });
+
+
+
+        // if (gumbIgra.isFocused()==true)
+        // {
+        //     gumbIgra.setStyle("-fx-background-color: #46ff00; ");
+        // }
+        // gumbIgra.setDefaultButton(true);
+        // int widthGumbIgra=(int)(gumbIgra.getWidth());
+        // int heightGumbIgra=(int)(gumbIgra.getHeight());
+        // System.out.println(widthGumbIgra+" "+ heightGumbIgra);
+
+        // gumbTemniNacin = new ToggleButton("TEMNI NAČIN");
+        // gumbTemniNacin.setFocusTraversable(false);
+        // if(TemniNacin==false)
+        // {
+        //     gumbTemniNacin.setOnAction(t -> 
+        //     {
+        //         paneMeni.setStyle("-fx-background-color: black;");
+        //         gumbTemniNacin.setStyle("-fx-focus-color: #ff0000; ");
+        //         gumbTemniNacin.setText("SVETLI NAČIN");
+        //         TemniNacin=true;
+        //     });
+        //     System.out.println(TemniNacin);
+        // }
+        
+        // else
+        // {
+        //     gumbTemniNacin.setOnAction(e ->
+        //     {
+        //         paneMeni.setStyle("-fx-background-color: yellow;");
+        //         gumbTemniNacin.setStyle("-fx-focus-color: #000000; ");
+        //         gumbTemniNacin.setText("TEMNI NAČIN");
+        //         TemniNacin=false;
+        //     });
+        //     System.out.println(TemniNacin);
+        // }
+
+
+
+        // gumbTemniNacin.setOnAction(t -> 
+        // {
+        //     paneMeni.setStyle("-fx-background-color: black;");
+        //     gumbTemniNacin.setStyle("-fx-focus-color: #ff0000; ");
+
+        //     gumbTemniNacin.setOnAction(e ->
+        //     {
+        //         paneMeni.setStyle("-fx-background-color: white;");
+        //         gumbTemniNacin.setStyle("-fx-focus-color: #000000; ");
+        //     });
+        // });
+
+
+
+
+        Igra.setOnKeyPressed(e -> {
+            if (e.getCode() == KeyCode.ESCAPE) 
+            {
+                try
+                {
+                    shraniRekord();
+                }
+                catch (IOException e1)
+                {
+                    e1.printStackTrace();
+                }
+                spremeniOkna(Meni);
+            }
+        });
+
+        // if(w<=1280 && h<=720)
+        // {
+        //     Image image=new Image("File:logo720p.png");
+        //     ImageView logo720p=new ImageView(image);
+        //     logo720p.setX(w/4);
+        //     logo720p.setY(h/8);
+        //     paneMeni.getChildren().add(logo720p); 
+        // }
+        // if(w>=1281 && w<=2240 && h>=721 && h<=1260)
+        // {
+            // Image image=new Image("File:logo1080p.png");
+            // ImageView logo1080p=new ImageView(image);
+            // logo1080p.setX(w/4);
+            // logo1080p.setY(h/8);
+            // paneMeni.getChildren().add(logo1080p);
+        // }
+
+        // if(w>=2241 && w<=3200 && h>=1261 && h<=1800)
+        // {
+        //     Image image=new Image("File:logo1440p.png");
+        //     ImageView logo1440p=new ImageView(image);
+        //     logo1440p.setX(w/4);
+        //     logo1440p.setY(h/8);
+        //     paneMeni.getChildren().add(logo1440p);
+        // }
+
+        // if(w>=3201 && h>=1800)
+        // {
+        //     Image image=new Image("File:logo4k.png");
+        //     ImageView logo4k=new ImageView(image);
+        //     logo4k.setX(w/4);
+        //     logo4k.setY(h/8);
+        //     paneMeni.getChildren().add(logo4k);
+        // }
+
+        // else
+        // {
+        //     Image image=new Image("File:logo1080p.png");
+        //     ImageView logo1080p=new ImageView(image);
+        //     logo1080p.setX(w/4);
+        //     logo1080p.setY(h/8);
+        //     paneMeni.getChildren().add(logo1080p);
+        // }
+
+        // Image image=new Image("File:logo1080p.png");
+        // ImageView logo=new ImageView(image);
+        // logo.setX(w/4);
+        // logo.setY(h/8);
+
+RANDOM ST Z HITROST ZOGCE
+
+    //random stevila za speed
+    // int randomSt1;
+    // int randomSt2;
+    // int randomSt3;
+    // int min1=3;
+    // int max1=6;
+    // int min2=7;
+    // int max2=11;
+    // int min3=12;
+    // int min4=15;
+    
+    // public int izberiRandomSt1(int min1, int max1)
+    // {
+    //     Random random=new Random();
+    //     randomSt1=random.nextInt(max1-min1+1)+min1;
+    //     return randomSt1;
+    // }
+
+    // public int izberiRandomSt2(int min2, int max2)
+    // {
+    //     Random random=new Random();
+    //     randomSt2=random.nextInt(max2-min2+1)+min2;
+    //     return randomSt2;
+    // }
+
+    // public int izberiRandomSt3(int min3, int max3)
+    // {
+    //     Random random=new Random();
+    //     randomSt3=random.nextInt(max3-min3+1)+min3;
+    //     return randomSt3;
+    // }
